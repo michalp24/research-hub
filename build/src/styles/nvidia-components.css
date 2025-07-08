@@ -1,0 +1,649 @@
+/* NVIDIA Components Library */
+
+body {
+  margin: 0;
+}
+
+/* Container */
+.nv-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+}
+
+/* Section */
+.nv-section {
+    padding: 6rem 0;
+}
+
+/* Typography */
+.nv-text-large {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--color-display-text);
+}
+
+.nv-h--large {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.nv-h--medium {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.nv-h--small {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.nv-h--smallest {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+/* Grid Layout */
+.nv-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.nv-grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.nv-grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.nv-grid__item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media Item Styles */
+.nv-media-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.nv-media-image {
+    width: 100%;
+    height: 200px;
+    background: #f5f5f5;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.nv-media-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nv-text-small {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    margin: 0;
+}
+
+/* Code Container Styles */
+.nv-code-container {
+    position: relative;
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    border: 1px solid #ededed;
+}
+
+.nv-code-block {
+    margin: 0;
+    padding: 1.5rem;
+    overflow-x: auto;
+    font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', 'monospace';
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #222;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.nv-code-block code {
+    font-family: inherit;
+    background: #f5f5f5;
+    color: #222;
+}
+.surface-alt-2 {
+    background-color: #f7f7f7;
+}
+
+/* Syntax Highlighting - Light Theme */
+.nv-code-block .token.comment {
+    color: #b0b0b0;
+}
+.nv-code-block .token.function {
+    color: #e07a1f;
+}
+.nv-code-block .token.keyword {
+    color: #3b82f6;
+    font-weight: 600;
+}
+.nv-code-block .token.string {
+    color: #22a06b;
+}
+.nv-code-block .token.number {
+    color: #b15dd4;
+}
+.nv-code-block .token.operator {
+    color: #3b82f6;
+}
+.nv-code-block .token.punctuation {
+    color: #222;
+}
+.nv-code-block .token.parameter {
+    color: #222;
+}
+.nv-code-block .token.class-name {
+    color: #e07a1f;
+}
+
+/* Copy Button (optional, for consistency) */
+.nv-code-copy-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 1;
+}
+.nv-code-copy-button:hover {
+    background: #f0f0f0;
+    color: #222;
+}
+.nv-code-copy-button.copied {
+    background: #76b900;
+    color: #fff;
+    border-color: #76b900;
+}
+
+/* Spacing Utilities */
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 2rem; }
+.mt-3 { margin-top: 1rem; }
+
+/* Custom Responsive Container */
+.nv-container-custom {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Custom Responsive Grid Layout */
+.nv-grid--2-cols-custom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.nv-grid--3-cols-custom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+@media (max-width: 900px) {
+  .nv-grid--3-cols-custom {
+    grid-template-columns: 1fr 1fr;
+  }
+  .nv-container-custom {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .nv-grid--3-cols-custom,
+  .nv-grid--2-cols-custom {
+    grid-template-columns: 1fr;
+  }
+  .nv-container-custom {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+.nv-container-no-padding {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Footer Styles ===== */
+.nv-footer {
+  background: #232323;
+  color: #b0b0b0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.95rem;
+  margin-top: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.nv-footer__links-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+.nv-footer__link {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.nv-footer__link:hover {
+  color: #76b900;
+  text-decoration: underline;
+}
+.nv-footer__separator {
+  color: #666;
+  margin: 0 0.5rem;
+  user-select: none;
+}
+.nv-footer__copyright-row {
+  padding-bottom: 0.5rem;
+}
+.nv-footer__copyright {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+  .nv-footer__links-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  .nv-footer__separator {
+    display: none;
+  }
+}
+
+/* ===== Header Banner Styles ===== */
+.nv-header-banner {
+  background: #232323;
+  color: #fff;
+  width: auto;
+  border-bottom: 1px solid #444;
+}
+.nv-header-banner__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  gap: 2.5rem;
+}
+.nv-header-banner__left {
+  flex: 2 1 0%;
+  min-width: 0;
+}
+.nv-header-banner__breadcrumb {
+  color: #b0b0b0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.nv-header-banner__breadcrumb-sep {
+  margin: 0 0.5rem;
+  color: #b0b0b0;
+}
+.nv-header-banner__title {
+  font-family: inherit;
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #fff;
+  line-height: 1.1;
+}
+.nv-header-banner__desc {
+  color: #e0e0e0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  max-width: 700px;
+  margin-bottom: 0px !important;
+}
+.nv-header-banner__right {
+  flex: 1 1 0%;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  border-left: 1px solid #666;
+  padding-left: 2rem;
+}
+.nv-header-banner__projects-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.nv-header-banner__cta {
+  display: inline-block;
+  background: #76b900;
+  color: #232323;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3px;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.nv-header-banner__cta:hover {
+  background: #5a8f00;
+  color: #fff;
+}
+.nv-header-banner__quicklinks-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.nv-header-banner__quicklinks-list {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+.nv-header-banner__quicklinks-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nv-header-banner__quicklinks-list li {
+  color: #b0b0b0;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 900px) {
+  .nv-header-banner__container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  .nv-header-banner__right {
+    width: 100%;
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #666;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .nv-header-banner__left {
+    width: 100%;
+  }
+  .nv-header-banner__quicklinks-list {
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .nv-header-banner__container {
+    padding: 1.2rem 0;
+  }
+  .nv-header-banner__title {
+    font-size: 2rem;
+  }
+  .nv-header-banner__desc {
+    font-size: 1rem;
+  }
+  .nv-header-banner__right {
+    min-width: 0;
+    padding-top: 1rem;
+  }
+}
+
+/* White list variant for header banner */
+.nv-list--white li {
+  color: #fff;
+  line-height: 1rem !important;
+}
+.nv-list--white li::before {
+  color: #fff !important;
+}
+
+.nv-header-banner__breadcrumb-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nv-header-banner__breadcrumb-link:hover {
+  text-decoration: underline;
+  color: #76b900;
+}
+
+/* ===== Meet the Team Styles ===== */
+.nv-meet-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem 1rem;
+  justify-items: center;
+}
+.nv-meet-team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.nv-meet-team-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  background: #e0e0e0;
+  margin-bottom: 1rem;
+  display: block;
+}
+.nv-meet-team-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+.nv-meet-team-title {
+  color: #666;
+  font-size: 1rem;
+}
+@media (max-width: 900px) {
+  .nv-meet-team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .nv-meet-team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.8rem;
+  }
+}
+
+.nv-meet-team-img-wrapper {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: #e0e0e0;
+  overflow: hidden;
+  margin-bottom: .5rem;
+}
+
+/* ===== Feature Teasers Grid Styles ===== */
+.nv-feature-teasers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.nv-teaser {
+  border-radius: 4px;
+  box-shadow: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: left;
+}
+.nv-teaser .nv-teaser-footer {
+  justify-content: left;
+}
+.nv-teaser-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #e0e0e0;
+}
+.nv-teaser-content {
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+}
+.nv-teaser-body {
+  flex: 1 1 0%;
+  margin-bottom: .5rem;
+}
+.nv-teaser-footer {
+  margin-top: auto;
+}
+.nv-cta-secondary--small {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: color 0.2s;
+}
+.nv-cta-secondary--small:hover {
+  color: #76b900;
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .nv-feature-teasers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+.nv-feature-teasers-grid--2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 900px) {
+  .nv-feature-teasers-grid--2 {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+.nv-teaser-card {
+  box-shadow: 0 0 var(--size-1x, 16px) 0 rgba(0, 0, 0, 0.3);
+}
+
+.no-gap {
+  gap: 0 !important;
+}
+
+/* ===== Font Awesome Overrides ===== */
+/* Override any font-family that might be set to "fa-sharp-regular" */
+.fa,
+.fas,
+.far,
+.fal,
+.fab,
+[class*="fa-"] {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 6 Brands" !important;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.nv-cta-secondary--small::after {
+    font-family: "fontawesome" !important;
+}
+.fa-solid,
+.fas {
+  font-weight: 900 !important;
+}
+
+.fa-regular,
+.far {
+  font-weight: 400 !important;
+}
+
+.fa-light,
+.fal {
+  font-weight: 300 !important;
+}
+
+.fa-brands,
+.fab {
+  font-weight: 400 !important;
+}
+
+/* Ensure Font Awesome icons are visible */
+.fa::before,
+.fas::before,
+.far::before,
+.fal::before,
+.fab::before,
+[class*="fa-"]::before {
+  display: inline-block !important;
+  font-family: "fontawesome" !important;
+  font-weight: inherit !important;
+  font-style: inherit !important;
+}
+
+/* Specific override for any elements with fa-sharp-regular font-family */
+*[style*="fa-sharp-regular"],
+*[style*="fa-sharp-regular"]::before,
+*[style*="fa-sharp-regular"]::after {
+  font-family: "fontawesome" !important;
+}
+
+/* ===== End Font Awesome Overrides ===== */ 

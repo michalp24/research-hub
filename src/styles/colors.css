@@ -1,0 +1,17 @@
+:root {
+    --color-brand: #76b900;
+    --color-brand-hover: #91c733;
+    --color-transparent: transparent;
+    --color-gray-0: #ffffff;
+    --color-gray-50: #f7f7f7;
+    --color-gray-100: #eeeeee;
+    --color-gray-200: #dddddd;
+    --color-gray-300: #cccccc;
+    --color-gray-400: #999999;
+    --color-gray-500: #808080;
+    --color-gray-600: #666666;
+    --color-gray-700: #333333;
+    --color-gray-800: #222222;
+    --color-gray-900: #1a1a1a;
+    --color-gray-950: #111111;
+} 
