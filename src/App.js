@@ -241,7 +241,17 @@ function App() {
                 <ul id={`nav-group-${idx}`} style={{ listStyle: 'none', paddingLeft: 0, marginTop: 8 }}>
                   {group.items.map(item => (
                     <NavItem key={item.id}>
-                      <NavLink href={item.href || `#${item.id}`}>{item.title}</NavLink>
+                      {group.title === 'Templates' ? (
+                        <NavLink
+                          href={item.href || `#${item.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.title}
+                        </NavLink>
+                      ) : (
+                        <NavLink href={item.href || `#${item.id}`}>{item.title}</NavLink>
+                      )}
                     </NavItem>
                   ))}
                 </ul>
